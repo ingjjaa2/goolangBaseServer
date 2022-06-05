@@ -10,11 +10,11 @@ import (
 )
 
 func main() {
-	fmt.Println("=========================================================")
+	fmt.Println("==============================================================")
 	server := fun.CreateServer(":4400")
 	server.Handle("GET", "/", server.AddMiddleware(HandleHome, CheckAuth()))
 	server.Listen()
-	fmt.Println("=========================================================")
+	fmt.Println("============================================================")
 }
 
 func HandleHome(w http.ResponseWriter, r *http.Request) {
